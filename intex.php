@@ -14,6 +14,7 @@
 </head>
 <body>
 	<?php include 'process.php'; ?>
+	
 
 	<?php
 		if (isset($_SESSION['message'])): ?>
@@ -40,6 +41,7 @@
 					<tr>
 						<th>Name</th>
 						<th>Location</th>
+						
 						<th colspan="2">Action</th>
 					</tr>
 				</thead>
@@ -53,7 +55,7 @@
 					<td>
 						<a href="intex.php?edit=<?php echo $row['id']; ?>"
 							class="btn btn-info">Edit</a>
-						<a href="process.php?delete=<?php echo $row['id']; ?>"
+						<a href="process.php?delete=<?php echo $row['id']; ?>"/* need add date and time*/
 							class="btn btn-danger">Delet</a>
 					</td>
 				</tr>
