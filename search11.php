@@ -21,7 +21,7 @@
   <?php include 'process.php'; ?>
   <?php
     $mysqli = new mysqli('localhost', 'root', '', 'document') or die(mysqli_error(mysqli));
-    $result = $mysqli->query("SELECT name, location from users where joindate between '$from_date' and '$to_date' order by joindate") or die($mysqli->error);
+    $result = $mysqli->query("SELECT name, location, joindate from users where joindate between '$from_date' and '$to_date' order by joindate") or die($mysqli->error);
 
     //pre_r($res->fetch_assoc());
     ?>
@@ -52,6 +52,7 @@
           <tr>
             <th>Name</th>
             <th>Location</th>
+            <th>Date</th>
 
           </tr>
         </thead>
@@ -62,6 +63,7 @@
         <tr>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $row['location']; ?></td>
+          <td><?php echo $row['joindate']; ?></td>
         </tr>
       <?php endwhile; ?>
     </table>

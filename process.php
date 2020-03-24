@@ -10,8 +10,8 @@ if (isset($_POST['save'])) {
 	
 	$mysqli->query ("INSERT INTO users (name, location) values('$name', '$location')") or die($mysqli->error); 
 
-	$_SESSION["message"] = "Record have been saved!";
-	$_SESSION["msg_type"] = "success";
+	//$_SESSION["message"] = "Record have been saved!";
+	//$_SESSION["msg_type"] = "success";
 
 	header("location: index.php");
 }
@@ -20,8 +20,8 @@ if (isset($_GET['delete'])) {
 	$id = $_GET['delete'];
 	$mysqli->query ("DELETE FROM users WHERE id = $id") or die($mysqli->error);
 
-	$_SESSION["message"] = "Record have been deleted";
-	$_SESSION["msg_type"] = "danger";
+	//$_SESSION["message"] = "Record have been deleted";
+	//$_SESSION["msg_type"] = "danger";
 
 	header("location: index.php");
 }

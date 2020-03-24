@@ -19,10 +19,10 @@
 	<?php
 		if (isset($_SESSION['message'])): ?>
 
-		<div class="alert alert-<?$_SESSTION['mgs_type']?>">
+		<div class="alert alert-<?$_SESSTION['msg_type']?>">
 			<?php
-			echo $_SESSTION['message'];
-			unset($_SESSTION['message']);
+			//echo $_SESSTION['message'];
+			//unset($_SESSTION['message']);
 			?>
 		</div>
 	<?php endif ?>
@@ -56,7 +56,7 @@
 						<a href="intex.php?edit=<?php echo $row['id']; ?>"
 							class="btn btn-info">Edit</a>
 						<a href="process.php?delete=<?php echo $row['id']; ?>"/* need add date and time*/
-							class="btn btn-danger">Delet</a>
+							class="btn btn-danger">Delete</a>
 					</td>
 				</tr>
 			<?php endwhile; ?>
